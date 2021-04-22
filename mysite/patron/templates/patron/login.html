@@ -1,0 +1,15 @@
+{% extends 'patron/home.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="container py-5">
+    <h1>Login</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ login_form|crispy }}
+        <button type="submit" class="btn btn-success">Login</button>
+    </form>
+    <p>Dont have an account? <a href="/register">Create an account</a></p>
+</div>
+{% endblock %}
