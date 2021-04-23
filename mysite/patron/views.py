@@ -6,7 +6,6 @@ from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm
 
 def home(request):
-    #context = {}
     return render(request = request, template_name="patron/home.html")
     
 
@@ -44,7 +43,7 @@ def login_request(request):
 def logout_request(request):
     logout(request)
     messages.info(request, "You have successfully logged out")
-    return redirect("patron:homepage")
+    return redirect("patron:home")
 
 
     

@@ -18,5 +18,8 @@ from django.urls import include, path
 
 urlpatterns = [
     path('', include('patron.urls')),
+    #path('', TemplateView.as_view(template_name='home.html'), name='home'), # new, might as well remove it later on
+    #path('login', views.login_request, name='login'),
     path('admin/', admin.site.urls),
+     path('', include('django.contrib.auth.urls')),
 ]
